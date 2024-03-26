@@ -1,14 +1,23 @@
-import { css } from "@linaria/core";
-import { View, Text } from "@tarojs/components";
+import { styled } from "@linaria/react";
+import { View } from "@tarojs/components";
 
-const styles = css`
-  background: red;
+const MyView = styled(View)`
+  background: grey;
   font-size: 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .txt {
+    color: green;
+  }
+  .txt2 {
+    color: yellow;
+  }
 `;
 export default () => (
-  <View className={styles}>
-    <Text>Hello world!</Text>
-    <Text>Taro UI 支持 Vue 了吗？</Text>
-    <Text>共建？</Text>
-  </View>
+  <MyView>
+    <View className="txt">Hello world</View>
+    <View className="txt2">taro linalria配置真操蛋</View>
+  </MyView>
 );
